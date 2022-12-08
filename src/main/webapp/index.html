@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<!--
+	Author: Ilia G. Bravard
+-->
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="Image1.png" type="image/x-icon" />
+	<title>Transaction Options</title>
+
+	<style>
+		body {
+			background-image: url("Image4.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			font-family: "montserrat";
+		}
+
+		h1 {
+			color: #ed7d31;
+			text-align: left;
+			font-size: 60px;
+			padding-left: 85px;
+			padding-bottom: 10px;
+		}
+
+		.container {
+			position: absolute;
+			background-color: transparent;
+			width: 375px;
+			left: 8%;
+			bottom: 9%;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 20px;
+			justify-items: center;
+			border-radius: 75px;
+			border-style: none;
+		}
+
+		div {
+			align-items: center;
+			color: #7696b4;
+			font-size: 25px;
+			text-align: right;
+		}
+
+		.logo {
+			position: absolute;
+			left: 15.5%;
+			top: 85%;
+		}
+
+		.add1 {
+			margin-bottom: 3.5rem;
+			position: relative;
+		}
+
+		.add1::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 0;
+			height: 2px;
+			background-color: #ed7d31;
+			transition: width 0.25s ease-out;
+		}
+
+		.add1:hover::before {
+			width: 100%;
+		}
+
+		.container input:hover {
+			rotate: 25deg;
+			transition: 0.25s ease-out;
+		}
+
+		.add:hover {
+			rotate: 35deg;
+			transition: 0.25s ease-out;
+		}
+
+		.submit {
+			background-image: url("Image7.png");
+			background-size: cover;
+			border-radius: 50%;
+			width: 55px;
+			cursor: pointer;
+			height: 55px;
+		}
+
+		.submitOne {
+			background-image: url("Image8.png");
+			background-size: cover;
+			border-radius: 50%;
+			width: 55px;
+			cursor: pointer;
+			height: 55px;
+			z-index: -1;
+		}
+	</style>
+
+</head>
+
+<body>
+	<h1>Home Page</h1>
+
+	<form class="container" method="post" action="usersServlet">
+		<div class="add1">Add Users</div>
+
+		<div class="add">
+			<a href="addUser.html"><img src="Image5.png" style="width: 50px; height: 50px" /></a>
+		</div>
+
+		<div class="add1">View All Users</div>
+		<div class="add">
+			<a href="usersServlet">
+				<img src="Image6.png" style="width: 50px; height: 50px; border-radius: 50%;" /></a>
+		</div>
+
+		<div class="add1">Assign Tasks</div>
+
+		<div class="add">
+			<input type="submit" name="doThisToUser" class="submit" value="">
+		</div>
+
+		<div class="add1">View All Tasks</div>
+
+		<div class="add">
+			<input type="submit" name="doThisToUser" class="submitOne" value=" ">
+		</div>
+	</form>
+</body>
+
+</html>

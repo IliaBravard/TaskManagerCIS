@@ -46,6 +46,9 @@
 						<td>${currenttask.dueDate}</td>
 					</tr>
 				</c:forEach>
+				<tr>
+					<td><strong>Total Tasks: ${numOfTasks}</strong></td>
+				</tr>
 			</table>
 			<input type="submit" value="complete" name="doThisToUser"
 				class="btn btn-warning"> <a href="exit.html"><input

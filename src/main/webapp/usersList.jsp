@@ -22,7 +22,7 @@
 
 <link rel="icon" href="Image1.png" type="image/x-icon" />
 
-<title>All Users!</title>
+<title>All Users</title>
 </head>
 <body>
 	<h2 style="margin: 25px; text-align: center;">List of Users</h2>
@@ -45,13 +45,16 @@
 						<td>${currentuser.taskID}</td>
 					</tr>
 				</c:forEach>
+				<tr>
+					<td><strong>Total Users: ${numOfUsers}</strong></td>
+				</tr>
 			</table>
 			<input type="submit" value="sort" name="doThisToUser"
 				class="btn btn-warning"> <input type="submit" value="delete"
-				name="doThisToUser" class="btn btn-danger"> 
-				<a href="exit.html"><input
-				type="button" value="exit" name="doThisToUser" class="btn btn-info"></a>
-			<a href="index.html"><input type="button" value="add"
+				name="doThisToUser" class="btn btn-danger"> <a
+				href="exit.html"><input type="button" value="exit"
+				name="doThisToUser" class="btn btn-info"></a> <a
+				href="index.html"><input type="button" value="add"
 				class="btn btn-success"></a>
 		</form>
 

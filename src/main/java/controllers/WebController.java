@@ -87,6 +87,7 @@ public class WebController extends HttpServlet {
 			try {
 				// Remove the top user from the stack
 				dao.pop();
+				request.setAttribute("numOfUsers", dao.size());
 			} catch (StackEmptyException e) { // Or handle the appropriate exception
 				e.printStackTrace();
 			}
@@ -107,6 +108,7 @@ public class WebController extends HttpServlet {
 
 			try {
 				// Sort them by the ID numbers using an insertion sort
+				request.setAttribute("numOfUsers", dao.size());
 				request.setAttribute("allUsers", dao.insertionSort());
 			} catch (StackEmptyException e) { // Or handle the appropriate exception
 				e.printStackTrace();
@@ -183,6 +185,7 @@ public class WebController extends HttpServlet {
 			try {
 				// Display all tasks that are in the priority queue
 				request.setAttribute("allTasks", queue.displayElements());
+				request.setAttribute("numOfTasks", queue.size());
 			} catch (PriorityQueueEmptyException e) { // Or handle the appropriate exception
 				e.printStackTrace();
 			}
@@ -213,6 +216,7 @@ public class WebController extends HttpServlet {
 			try {
 				// Remove the completed task from the priority queue
 				queue.dequeue(taskToComplete);
+				request.setAttribute("numOfTasks", queue.size());
 			} catch (PriorityQueueEmptyException e) { // Or handle the appropriate exception
 				e.printStackTrace();
 			}
@@ -280,6 +284,7 @@ public class WebController extends HttpServlet {
 		try {
 			// Get all users that are in the application
 			request.setAttribute("allUsers", dao.showAll());
+			request.setAttribute("numOfUsers", dao.size());
 		} catch (StackEmptyException e) { // Or handle the appropriate exception
 			e.printStackTrace();
 		}
